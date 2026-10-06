@@ -1,0 +1,38 @@
+CONTEST RULES (all must be satisfied)
+
+Technical
+- Frontend-only web app. No backend, serverless functions, Firebase/Supabase/Appwrite, or online storage. Persistence only via localStorage/sessionStorage/IndexedDB.
+- Core features must work without AI and without external APIs. Any external API must be HTTPS and CORS-friendly, with a friendly fallback if it fails.
+- Optional AI features: the user types their own API key (kept in memory only). No secrets in code, repo, or commits.
+- Static deploy: provide build command and output folder, use relative asset paths. Must open in latest Chrome with no login or install, on desktop and mobile.
+- Libraries via npm/CDN only if truly needed. No code copied from other projects.
+
+Functionality
+- Useful for an organization: clear workflows, tables/lists, search/filter, validation, and CSV/JSON export/import where relevant.
+- Main tasks first; bonus tasks only after the main ones fully work.
+- Include the problem's sample data so the app is demonstrable immediately.
+- Handle empty, loading, invalid-input, and large-input states. No console errors.
+
+Bilingual (Bangla + English)
+- Visible language switch (বাংলা | EN) in the same header spot on every screen; remember the choice in localStorage.
+- ALL labels, buttons, messages, errors, placeholders, and instructions exist in both languages. Use one i18n file (en/bn); never hardcode UI text.
+- Format numbers and dates correctly per language.
+
+DESIGN RULES (anti-AI-slop; save in design.md)
+
+Goal: the app must look designed by a real product designer for this specific organization and problem, not AI-generated.
+- Avoid: generic landing pages (first screen is the working tool), gradients, glassmorphism, glowing borders, neon, particles, blobs, excessive rounded corners, oversized headings, purposeless empty space, repeating the same card grid everywhere, decorative animation, trend-chasing.
+- Do: one restrained palette (1 accent, neutral greys, semantic colors) as CSS variables; consistent type scale, spacing, borders, radii, shadows; clear hierarchy with one primary action per screen; tables, lists, split panes, or sidebars where they fit the data; some asymmetry or domain-specific detail; subtle transitions (150-200ms) only for state feedback; visible hover/focus/disabled/empty/loading/error states; good contrast and keyboard access.
+- Bangla typography: use Noto Sans Bengali (or similar), line-height about 1.6, no fixed-width buttons or labels, layouts must survive longer Bangla text.
+- Decision rule: before adding any visual effect or component, ask "Does this improve the user's experience or communicate something important?" If not, don't add it.
+
+DELIVERABLES
+- README.md: overview, main/bonus features, run locally, build command, deployment steps, live URL placeholder, language support note, how AI tools were used.
+- MIT LICENSE, .gitignore (node_modules, dist, .env).
+- skill.md (architecture and coding rules) and design.md (from the design rules above, with actual palette and fonts filled in).
+
+WORKFLOW
+1. First reply: a plan in max 10 lines (main tasks, bonus tasks, stack, folder structure, palette and fonts). Then wait for my "go".
+2. Then build main tasks one small step at a time, giving only changed files or diffs.
+3. After each step, a 3-line checklist: working / broken / next.
+4. Before I say "final", check every rule above and report any gaps.
